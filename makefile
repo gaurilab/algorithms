@@ -2,7 +2,6 @@
 # Declaration of variables
 CC = g++
 CC_FLAGS = -w
-.PHONY=clean
 # File names
 #EXEC = run
 SOURCES = $(wildcard *.cpp)
@@ -17,7 +16,4 @@ OBJECTS = $(SOURCES:.cpp=.o)
 %.o: %.cpp
 	$(CC) -c $(CC_FLAGS) $< -o $@
 
-# To remove generated files
-clean:
-	rm -f $(OBJECTS)
 
