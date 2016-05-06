@@ -1,0 +1,25 @@
+#include "BinaryTree.h"
+#include <vector>
+#include <deque>
+
+using namespace std;
+
+
+int main() {
+	BinaryTree sol;
+	sol.addKey(10);
+	sol.addKey(21);
+	sol.addKey(5);
+	sol.addKey(7);
+	sol.addKey(2);
+	sol.addKey(17);
+	sol.addKey(31);
+	sol.addKey(19);
+	sol.addKey(16);
+
+	sol.printKeys();
+	morrisInorder(sol.tree);
+	sol.printKeys();
+	morrisPreorder(sol.tree);
+	return 0;
+}
